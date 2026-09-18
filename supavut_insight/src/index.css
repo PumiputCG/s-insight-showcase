@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.font-thai {
+  font-family: "Noto Sans Thai", "Noto Sans", "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  /* Adding a subtle background pattern for a more premium feel */
+  background-color: #f8fafc;
+  background-image: radial-gradient(#dbeafe 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: var(--color-slate-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.modal-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-video-overlay {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.14) 45%, rgba(255, 255, 255, 0.05) 100%),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 28%, rgba(0, 0, 0, 0.36) 70%, rgba(0, 0, 0, 0.6) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.12) 42%, rgba(0, 0, 0, 0.52) 100%);
+}
+
+.hero-center-copy h1 {
+  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.42);
+}
+
+.hero-center-copy p {
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+.cursor-focus-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  background-color: #ffffff;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 150ms ease, transform 120ms ease;
+}
+
+.cursor-focus-ring--active {
+  transform: translate(-50%, -50%) scale(0.84);
+}
+
+@media (pointer: coarse) {
+  .cursor-focus-ring {
+    display: none;
+  }
+}
