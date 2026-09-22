@@ -1,68 +1,34 @@
 # S-Insight Showcase
 
-**TH:** เว็บโชว์ผลงานระบบภายในที่ทำให้องค์กร สร้างด้วย React
-**EN:** A showcase site for the internal systems I built at work, made with React.
+## S-Insight Showcase คืออะไร / About
 
-`React 19` · `Vite 7` · `Tailwind CSS 4` · `JavaScript`
+เว็บรวมระบบภายในที่ผมพัฒนาไว้ในหน้าเดียว แสดงแต่ละระบบเป็นการ์ด กดดูรายละเอียดได้ และมีลิงก์เข้าไปใช้งานระบบจริงได้ทันที
 
----
+A single page that brings together the internal systems I built. Each system appears as a card with a detail view and a link straight into the live system.
 
-## 🇹🇭 ภาษาไทย
+## ทำอะไรได้บ้าง / Features
 
-### ทำไว้ทำไม
+- แสดงทุกระบบเป็นการ์ดในหน้าเดียว
+- กดการ์ดเพื่อเปิดรายละเอียดของแต่ละระบบ
+- มีลิงก์เข้าไปใช้งานระบบจริง
+- ข้อมูลทุกระบบอยู่ในไฟล์ `projects.js` ไฟล์เดียว เพิ่มระบบใหม่ได้โดยไม่ต้องแก้ component
 
-ระบบภายในที่ทำมาหลายตัวไม่มีใครเห็นนอกจากคนในบริษัท เวลาจะเล่าให้คนอื่นฟังว่าทำอะไรไปบ้างก็เล่ายาก เลยทำหน้าเว็บรวมไว้ กดดูรายละเอียดแต่ละโปรเจคได้
+* Every system shown as a card on one page
+* A detail view for each system
+* Links into each live system
+* All project data lives in a single `projects.js` file, so adding a system needs no component changes
 
-### โครงสร้าง
+## Tech Stack
 
-```
-src/
-├── App.jsx          → โครงหลักของหน้า
-├── Header.jsx       → ส่วนหัว
-├── ProjectList.jsx  → แสดงรายการโปรเจคทั้งหมด
-├── ProjectCard.jsx  → การ์ดของแต่ละโปรเจค
-├── ProjectModal.jsx → ป๊อปอัปดูรายละเอียด
-├── Footer.jsx       → ส่วนท้าย
-└── projects.js      → ข้อมูลโปรเจคทั้งหมด (แก้ที่นี่ที่เดียว)
-```
+**Frontend:** React 19, JavaScript, Vite, Tailwind CSS, Lucide, AOS
 
-ข้อมูลโปรเจคแยกออกมาไว้ใน `projects.js` ตัวเดียว เพิ่มโปรเจคใหม่ไม่ต้องแตะ component
+## ติดตั้ง / Installation
 
-### รัน
+ต้องมี Node.js 18 ขึ้นไป ตัวแอปอยู่ในโฟลเดอร์ย่อยที่มีไฟล์ `package.json` ให้เข้าไปในโฟลเดอร์นั้นก่อน แล้วรันคำสั่งด้านล่าง จากนั้นเปิดลิงก์ที่ Vite แสดงในหน้าจอ
 
-```bash
-npm install
-npm run dev     # โหมดพัฒนา
-npm run build   # build ขึ้น production
-```
-
----
-
-## 🇬🇧 English
-
-### Why it exists
-
-The internal systems I've built aren't visible to anyone outside the company, which makes them hard to talk about. This site collects them in one place, with a detail view for each.
-
-### Structure
-
-```
-src/
-├── App.jsx          → page shell
-├── Header.jsx
-├── ProjectList.jsx  → renders every project
-├── ProjectCard.jsx  → a single project card
-├── ProjectModal.jsx → detail popup
-├── Footer.jsx
-└── projects.js      → all project data, in one place
-```
-
-Project data lives entirely in `projects.js`, so adding a project never means touching a component.
-
-### Running it
+Requires Node.js 18+. The app sits in the subfolder that contains `package.json`. Move into that folder first, run the commands below, then open the link Vite prints.
 
 ```bash
 npm install
 npm run dev
-npm run build
 ```
